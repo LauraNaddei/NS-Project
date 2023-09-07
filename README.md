@@ -11,6 +11,9 @@ Objectives:
 3. Gain access to the protected server and retrieve the sensitive information from it.
 
 ## Scenario 
+
+![MicrosoftTeams-image (21)](https://github.com/LauraNaddei/NS-Project/assets/73280653/587aeff0-c5a2-462b-b9fc-4e589e6bfae5)
+
 During the demonstration scenario, we use these IPs:
 
 - 193.20.1.1 - Company Network
