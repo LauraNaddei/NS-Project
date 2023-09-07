@@ -1,5 +1,7 @@
 # Network Security - Project
 
+Network Security project about Phishing and SSH.
+
 ## Background Scenario
 
 Our laboratory aims to simulate a real-world scenario where Luciano, an attacker, attempts to access a protected server containing sensitive information. For security purposes, this server is configured to allow access solely from a specific IP address associated with the system's admin, Massimiliano.
