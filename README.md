@@ -114,6 +114,12 @@ Enumeration for Massimiliano's host:
 ![MicrosoftTeams-image (8)](https://github.com/LauraNaddei/NS-Project/assets/73280653/8d34edc2-1429-4336-b8a9-7b4c00b0e1fa)
 On Massimiliano PC, we find an OpenSSH open port.
 
+It was previously opened on Massimiliano PC through the command:
+
+```
+\urs\sbin\sshd
+```
+
 Enumeration for the SMTP Server:
 
 ![MicrosoftTeams-image (9)](https://github.com/LauraNaddei/NS-Project/assets/73280653/4fb81806-0d4d-446f-8710-b85764e92878)
