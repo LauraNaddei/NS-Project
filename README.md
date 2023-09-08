@@ -73,6 +73,10 @@ Then, we discover some IPs using then nmap tool with these options:
 - “-PE” sends ICMP Echo Request.
 - “--send-ip” to not send ARP packets.
 
+```
+nmap -sn -PE --send-ip 193.20.1.0/24
+```
+
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/footprinting.png)
 
 ### Scanning
@@ -80,6 +84,10 @@ We're interested in the open services on the network so we can scan it more aggr
 
 If we use simply a TPC SYN scan from nmap, we find vague information. In particular, nmap is used with the following flag:
 - -sS: TCP SYN
+
+```
+nmap -sS [IP_address]
+```
 
 Scanning for the Protected Web Server:
 
@@ -106,6 +114,10 @@ Scanning for the SMTP Server:
 Instead, if we explore deeply with a Version Detection scan through nmap, we can obtain service fingerprints on the hosts.
 In particular, nmap is used with the following flag:
 - -sV: probe open ports to determine service/version info.
+
+```
+nmap -sV [IP_address]
+```
 
 Enumeration for Massimiliano's host:
 
@@ -139,6 +151,10 @@ The first step is to connect manually to the SMTP server and try verifying some 
 The netcat command is used with the following flags:
 - -n, --noodns: do not resolve hostnames via DNS
 - -v, --verbose: set verbosity level (can be used several times)
+
+```
+netcat -nv 193.20.1.3 25 
+```
 
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/netcat(SMTP).png)  
 
