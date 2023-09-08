@@ -14,7 +14,7 @@ Objectives:
 
 ## Scenario 
 
-![MicrosoftTeams-image (21)](https://github.com/LauraNaddei/NS-Project/assets/73280653/587aeff0-c5a2-462b-b9fc-4e589e6bfae5)
+![intranet](https://github.com/LauraNaddei/NS-Project/tree/main/images/intranet.png)
 
 During the demonstration scenario, we use these IPs:
 
