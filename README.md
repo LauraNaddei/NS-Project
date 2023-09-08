@@ -115,7 +115,7 @@ Scanning for Massimiliano's host:
 
 Scanning for the SMTP Server:
 
-![image](./images/scanning_SMTP)
+![image](./images/scanning_SMTP.png)
 
 ### Enumeration
 Instead, if we explore deeply with a Version Detection scan through nmap, we can obtain service fingerprints on the hosts.
