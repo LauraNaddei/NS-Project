@@ -1,7 +1,7 @@
 version: '2'
 services:
   sensitive_info_server:
-    image: 'lauranaddei/protected_server:latest'
+    image: 'lauranaddei/protectedserver:latest'
     stdin_open: true
     tty: true
     networks:
