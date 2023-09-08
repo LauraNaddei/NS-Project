@@ -73,6 +73,7 @@ Then, we discover some IPs using then nmap tool with these options:
 - “-PE” sends ICMP Echo Request.
 - “--send-ip” to not send ARP packets.
 
+
 ```
 nmap -sn -PE --send-ip 193.20.1.0/24
 ```
