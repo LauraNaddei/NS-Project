@@ -14,7 +14,7 @@ Objectives:
 
 ## Scenario 
 
-https://github.com/LauraNaddei/NS-Project/tree/main/images/intranet.png
+![Model](https://github.com/LauraNaddei/NS-Project/tree/main/images/intranet.png)
 
 During the demonstration scenario, we use these IPs:
 
