@@ -186,7 +186,7 @@ Our purpose is stealing Massimiliano's password.
 
 At first, we use the setoolkit tool with the scope of cloning the Linkedin login web page.
 
-![image](./main/images/setoolkit.png)
+![image](./images/setoolkit.png)
 
 As shown, any request to the 193.20.1.6 IP is mapped to the fake Linkedin login page and every access to that page will be tracked by setoolkit.
 
