@@ -135,7 +135,7 @@ On Massimiliano PC, we find an OpenSSH open port.
 It was previously opened on Massimiliano PC through the command:
 
 ```
-\urs\sbin\sshd
+/usr/sbin/sshd
 ```
 
 Enumeration for the SMTP Server:
@@ -170,6 +170,10 @@ To automatize the research operation, the script "smtp-user-enum.pl" is used to 
 
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/unix_user.txt.png)
 
+```
+smtp-user-enum.pl -M VRFY -U unix_users.txt -t 193.20.1.3
+```
+
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/Script+VRFY.png)
 
 We find out the matching with "massimiliano" as username.
@@ -201,6 +205,10 @@ On setoolkit we discover Massimiliano's password:
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/credentials_stealing.png)
 
 ### Local Port Forwarding
+
+```
+ssh -L 8181:193.20.1.2:80 massimiliano@193.20.1.4
+```
 
 We can use Massimiliano OpenSSH open port to set up an ssh tunnel with him. 
 The local port forwarding tecnique is used to bypass the firewall by forwarding the client machine port 8181 to the server machine port 80 via the Massimiliano's PC.
