@@ -69,14 +69,13 @@ We start by finding out our IP address on the networks using ifconfig command:
 
 Then, we discover some IPs using then nmap tool with these options:
 
-- “-sn” means “no port scan”.
-- “-PE” sends ICMP Echo Request.
-- “--send-ip” to not send ARP packets.
-
-
 ```
 nmap -sn -PE --send-ip 193.20.1.0/24
 ```
+
+- “-sn” means “no port scan”.
+- “-PE” sends ICMP Echo Request.
+- “--send-ip” to not send ARP packets.
 
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/footprinting.png)
 
@@ -84,11 +83,12 @@ nmap -sn -PE --send-ip 193.20.1.0/24
 We're interested in the open services on the network so we can scan it more aggressively.
 
 If we use simply a TPC SYN scan from nmap, we find vague information. In particular, nmap is used with the following flag:
-- -sS: TCP SYN
 
 ```
 nmap -sS [IP_address]
 ```
+
+- -sS: TCP SYN
 
 Scanning for the Protected Web Server:
 
@@ -100,6 +100,12 @@ When we try to access to 193.20.1.2:
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/denied_access.png)
 
 This happens because iptables rules were previously set for the 193.20.1.2 IP (Protected Web Server) in order to provide the access to the Web Server only by the 193.20.1.4 IP (Massimiliano PC) as shown:
+
+```
+iptables -A INPUT -s 193.20.1.4 -j ACCEPT
+iptables -A INPUT -j DROP
+iptables -L
+```
 
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/IPtables_setting.png)
 
@@ -114,11 +120,11 @@ Scanning for the SMTP Server:
 ### Enumeration
 Instead, if we explore deeply with a Version Detection scan through nmap, we can obtain service fingerprints on the hosts.
 In particular, nmap is used with the following flag:
-- -sV: probe open ports to determine service/version info.
 
 ```
 nmap -sV [IP_address]
 ```
+- -sV: probe open ports to determine service/version info.
 
 Enumeration for Massimiliano's host:
 
@@ -150,12 +156,13 @@ password: forzajuve
 The first step is to connect manually to the SMTP server and try verifying some users.
 
 The netcat command is used with the following flags:
-- -n, --noodns: do not resolve hostnames via DNS
-- -v, --verbose: set verbosity level (can be used several times)
 
 ```
 netcat -nv 193.20.1.3 25 
 ```
+
+- -n, --noodns: do not resolve hostnames via DNS
+- -v, --verbose: set verbosity level (can be used several times)
 
 ![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/netcat(SMTP).png)  
 
