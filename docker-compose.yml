@@ -1,0 +1,48 @@
+version: '2'
+services:
+  sensitive_info_server:
+    image: 'lauranaddei/protected_server:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      intranet:
+        ipv4_address: 193.20.1.2
+  SMTP_server:
+    image: 'nsunina/postfix:v1.1'
+    stdin_open: true
+    tty: true
+    networks:
+      intranet:
+        ipv4_address: 193.20.1.3
+  admin_host:
+    image: 'lauranaddei/ssh-server-firefox:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      intranet:
+        ipv4_address: 193.20.1.4
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+  hacker_host:
+    image: 'lauranaddei/ssh-server-firefox:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      intranet:
+        ipv4_address: 193.20.1.5
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+  hack_tools:
+    image: 'lauranaddei/hacker_host:latest'
+    stdin_open: true
+    tty: true
+    networks:
+      intranet:
+        ipv4_address: 193.20.1.6
+networks:
+  intranet:
+    ipam:
+      config:
+        - subnet: 193.20.1.1/24
