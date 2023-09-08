@@ -65,7 +65,7 @@ In this case scenario we're already connected to the local network, so we've alr
 
 We start by finding out our IP address on the networks using ifconfig command:
 
-![image](https://github.com/LauraNaddei/NS-Project/blob/main/hacker_ifconfig.png)
+![image](https://github.com/LauraNaddei/NS-Project/blob/main/images/hacker_ifconfig.png)
 
 Then, we discover some IPs using then nmap tool with these options:
 
