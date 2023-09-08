@@ -97,7 +97,7 @@ Scanning for the Protected Web Server:
 As we can see all the scanned port are filtered.
 When we try to access to 193.20.1.2:
 
-![image](./main/images/denied_access.png)
+![image](./images/denied_access.png)
 
 This happens because iptables rules were previously set for the 193.20.1.2 IP (Protected Web Server) in order to provide the access to the Web Server only by the 193.20.1.4 IP (Massimiliano PC) as shown:
 
@@ -115,7 +115,7 @@ Scanning for Massimiliano's host:
 
 Scanning for the SMTP Server:
 
-![image](./main/images/scanning_SMTP.png)
+![image](./images/scanning_SMTP)
 
 ### Enumeration
 Instead, if we explore deeply with a Version Detection scan through nmap, we can obtain service fingerprints on the hosts.
