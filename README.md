@@ -164,7 +164,7 @@ netcat -nv 193.20.1.3 25
 - -n, --noodns: do not resolve hostnames via DNS
 - -v, --verbose: set verbosity level (can be used several times)
 
-![image](./images/netcat(SMTP).png)  
+![image](./images/netcatSMTP.png)  
 
 To automatize the research operation, the script "smtp-user-enum.pl" is used to enumerate SMTP users using the VRFY command. In order to use this script you need to attach and use the following hack tool: nsunina/smtp-user-enum.
 
@@ -176,7 +176,7 @@ It is lauched with a list of possible Massimiliano Allegri usernames generated b
 smtp-user-enum.pl -M VRFY -U unix_users.txt -t 193.20.1.3
 ```
 
-![image](./images/Script+VRFY.png)
+![image](./images/Script_VRFY.png)
 
 We find out the matching with "massimiliano" as username.
 
