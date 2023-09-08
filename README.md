@@ -36,6 +36,30 @@ During the demonstration scenario, we use these IPs:
 3. Enumeration: intrusive probing of vulnerable services.
 4. Exploitation: attack those potential vulnerability.
 
+## Docker HUB
+For our purposes a new docker image is created for the attacker's machine following these steps: 
+
+1. A Dockerfile is created as follows:
+
+![image](https://github.com/LauraNaddei/NS-Project/assets/73280653/44e37803-ea51-4100-bec4-8b40a0c04c55)
+
+2. The image "hacker_host" is created through the "docker build" command:
+   
+```
+docker build -t hacker_host .
+```
+
+3. The new image is pushed on our public Docker HUB repository for future use:
+   
+```
+docker login
+docker tag hacker_host lauranaddei/hacker_host
+docker push lauranaddei/hacker_host
+```
+
+![image](https://github.com/LauraNaddei/NS-Project/assets/73280653/804379cc-2735-4372-be14-7075fa63e3cf)
+
+
 ### Footprinting
 
 In this case scenario we're already connected to the local network, so we've already gathered enough information about our target.
@@ -150,6 +174,8 @@ The local port forwarding tecnique is used to bypass the firewall by forwarding 
 
 Now, we are able to bypass the firewall accessing to the Protected Web Server from localhost:8181.
 
-![MicrosoftTeams-image (18)](https://github.com/LauraNaddei/NS-Project/assets/73280653/871900d7-441c-4561-9fa0-320343f890ba)
+![image](https://github.com/LauraNaddei/NS-Project/assets/73280653/8d78c9aa-bec8-447f-ba30-d4686d3881e1)
+
+
 
 
