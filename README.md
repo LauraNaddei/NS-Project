@@ -128,6 +128,12 @@ We have now discovered about the SMTP server opened on the 25 port.
 
 Our purpose is to find out Massimiliano's username in the intranet context.
 
+Massimiano's credentials into the intranet context are previously set as:
+
+```
+
+```
+
 The first step is to connect manually to the SMTP server and try verifying some users.
 
 The netcat command is used with the following flags:
