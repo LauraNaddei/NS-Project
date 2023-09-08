@@ -13,8 +13,8 @@ Objectives:
 3. Gain access to the protected server and retrieve the sensitive information from it.
 
 ## Scenario 
+![Intranet](/images/intranet.png?raw=true "Title")
 
-![Model](https://github.com/LauraNaddei/NS-Project/tree/main/images/intranet.png)
 
 During the demonstration scenario, we use these IPs:
 
